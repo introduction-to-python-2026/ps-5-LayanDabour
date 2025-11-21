@@ -30,15 +30,15 @@ def split_at_digit(formula):
     return x, y
 
 def count_atoms_in_molecule(formula):
-   atom_counts = {}
-   parts = split_before_uppercases(formula)
-   for a in parts: 
+    atom_counts = {}
+    parts = split_before_uppercases(formula)
+    for a in parts: 
        atom, count = split_at_digit(a)
        if atom in atom_counts:
         atom_counts[atom] += count
        else:
          atom_counts[atom] = count
-   return atom_counts
+    return atom_counts
 
 
 
