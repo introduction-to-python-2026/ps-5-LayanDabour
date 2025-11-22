@@ -29,9 +29,9 @@ def split_at_digit(formula):
        x = formula[0:digit_index]
     return x, y
 
-def count_atoms_in_molecule(formula):
+def count_atoms_in_molecule(molecular_formula):
     atom_counts = {}
-    parts = split_before_uppercases(formula)
+    parts = split_before_uppercases(molecular_formula)
     for a in parts: 
        atom, count = split_at_digit(a)
        if atom in atom_counts:
